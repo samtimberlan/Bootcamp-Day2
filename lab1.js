@@ -1,4 +1,7 @@
-const Car = function (name, model, type, numOfDoors, speed, numOfWheels ){
+
+
+class Car {
+  constructor(name, model, type, numOfDoors, isSaloon, speed, numOfWheels){
 	this.name = name;
 	this.model = model;
 	this.type = type;
@@ -6,6 +9,7 @@ const Car = function (name, model, type, numOfDoors, speed, numOfWheels ){
 	this.isSaloon = true;
 	this.speed = "";
 	numOfWheels = "4";
+  
 
 	if(name === null || model === null || type === null || name === undefined || model === undefined || type === undefined || name === "" || model === "" || type === "")
 	{
@@ -26,10 +30,11 @@ const Car = function (name, model, type, numOfDoors, speed, numOfWheels ){
 	  this.isSaloon = false;
 	  
 	}
+  }
 	
-}
 
-Car.prototype.drive = (gear) => 
+
+drive(gear)
 { 
   if(gear === 1)
   {
@@ -80,9 +85,15 @@ Car.prototype.drive = (gear) =>
     }
     this.speed = "120km/h";
   }
+
+  else if(gear === 7 && type === 'trailer'){
+    this.speed = "77km/h";
+  }
   
   else 
   {
     console.log("In order to drive, gear must be between 1 and 5");
   }
 }
+}
+module.exports = new Car 

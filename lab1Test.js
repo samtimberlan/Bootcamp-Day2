@@ -1,12 +1,12 @@
 const jasmine = require('jasmine');
-const myApp = require('./lab1 (Car OOP).js');
+const myApp = require('./lab1.js');
 
 describe("Car Class: Create a car, make it drive", function() {
 
     it("The car should be a type of `object`, and an instance of the `Car` class", function() {
       var honda = new Car('Honda');
-      expect(typeof honda).toEqual(typeof {});
-      expect(honda instanceof Car).toBeTruthy();
+      expect(typeof myApp.honda).toEqual(typeof {});
+      expect(myApp.honda instanceof Car).toBeTruthy();
     });
 
     it("The car should be called 'General' if no name is passed as a parameter", function() {
