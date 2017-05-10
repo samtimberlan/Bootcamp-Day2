@@ -1,0 +1,30 @@
+const Car = function (name, model, type, numOfDoors, speed, numOfWheels ){
+	this.name = name;
+	this.model = model;
+	this.type = type;
+	this.numOfDoors = 4;
+	this.isSaloon = true;
+	this.speed = "";
+	numOfWheels = "4";
+
+	if(name === null || model === null || type === null || name === undefined || model === undefined || type === undefined || name === "" || model === "" || type === "")
+	{
+	  this.type = "General";
+	  this.model = "GM";
+	  this.name = "Vehicle";
+	}
+	
+	if(name === "porsche" || name ==="koenigsegg" || name === "Porsche" || name ==="Koenigsegg")
+	{
+	  this.numOfDoors = 2;
+	  
+	}
+	
+	if(type === "trailer")
+	{
+	  this.numOfWheels = 8;
+	  this.isSaloon = false;
+	  
+	}
+	
+}
