@@ -19,4 +19,5 @@ const wordChecker = (wordsPassed) => {
       console.log("Please enter an array");
     }
 }
-wordChecker('car : carpet as java : javascript!!&@$%^&');
+
+module.exports.wordChecker = wordChecker;
